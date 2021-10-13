@@ -41,4 +41,30 @@
   &.abs-br {
     @extends ._.abs-b, ._.abs-r;
   }
+  &.lr-c {
+    @extends ._.abs-l, ._.abs-r;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.tb-c {
+    @extends ._.abs-t, ._.abs-b;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  &.pos-trans-c {
+    @extends ._.abs;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &.pos-trans-vc {
+    @extends ._.abs;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.pos-trans-c-c {
+    @extends ._.abs;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
