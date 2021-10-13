@@ -1,0 +1,44 @@
+._ {
+  &.fixed {
+    position: fixed;
+  }
+  &.abs {
+    position: absolute;
+  }
+  &.relative {
+    position: relative;
+  }
+  &.astronaut {
+    @extends ._.fixed;
+    top: -99999999px;
+    left: -99999999px;
+  }
+  &.abs-t {
+    @extend ._.abs;
+    top: 0;
+  }
+  &.abs-b {
+    @extend ._.abs;
+    bottom: 0;
+  }
+  &.abs-l {
+    @extend ._.abs;
+    left: 0;
+  }
+  &.abs-r {
+    @extend ._.abs;
+    right: 0;
+  }
+  &.abs-tl {
+    @extends ._.abs-t, ._.abs-l;
+  }
+  &.abs-tr {
+    @extends ._.abs-t, ._.abs-r;
+  }
+  &.abs-bl {
+    @extends ._.abs-b, ._.abs-l;
+  }
+  &.abs-br {
+    @extends ._.abs-b, ._.abs-r;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "locss",
+  "version": "1.0.0",
+  "description": "css utils",
+  "main": "dist/index.css",
+  "dependencies": {},
+  "devDependencies": {
+    "stylus": "^0.55.0"
+  },
+  "scripts": {
+    "build": "stylus -c src -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mengxinssfd/locss.git"
+  },
+  "keywords": [
+    "css",
+    "utils"
+  ],
+  "author": "dyh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mengxinssfd/locss/issues"
+  },
+  "homepage": "https://github.com/mengxinssfd/locss#readme"
+}

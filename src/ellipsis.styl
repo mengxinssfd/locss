@@ -1,0 +1,35 @@
+._ {
+  &.ellipsis-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  // 需要另外设置行数
+  &.ellipsis-mul {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  &.ellipsis-2 {
+    @extend ._.ellipsis-mul;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+  }
+  &.ellipsis-3 {
+    @extend ._.ellipsis-mul;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+  }
+  &.ellipsis-4 {
+    @extend ._.ellipsis-mul;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+  }
+  &.ellipsis-5 {
+    @extend ._.ellipsis-mul;
+    line-clamp: 5;
+    -webkit-line-clamp: 5;
+  }
+}

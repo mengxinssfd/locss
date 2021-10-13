@@ -1,0 +1,62 @@
+._ {
+  &.flex {
+    display: flex;
+  }
+
+  &.jstf-evenly {
+    justify-content: space-evenly;
+  }
+  &.jstf-between {
+    justify-content: space-between;
+  }
+  &.jstf-around {
+    justify-content: space-around;
+  }
+  &.flex-c {
+    @extend ._.flex;
+    align-items: center;
+  }
+  &.flex-c-c {
+    @extends ._.flex-c ;
+    justify-content: center;
+  }
+  &.flex-c-between {
+    @extends ._.flex-c,._.jstf-between;
+  }
+  &.flex-c-evenly {
+    @extends ._.flex-c,._.jstf-evenly;
+  }
+  &.flex-c-around {
+    @extends ._.flex-c,._.jstf-around;
+  }
+  &.flex-col {
+    @extends ._.flex;
+    flex-direction: column;
+  }
+  &.flex-col-c {
+    @extends ._.flex-c;
+    flex-direction: column;
+  }
+  &.flex-col-c-c {
+    @extends ._.flex-c-c;
+    flex-direction: column;
+  }
+  &.flex-col-between {
+    @extends ._.flex-col, ._.jstf-between;
+  }
+  &.flex-col-c-between {
+    @extends ._.flex-col-c, ._.jstf-between;
+  }
+  &.flex-col-evenly {
+    @extends ._.flex-col, ._.jstf-evenly;
+  }
+  &.flex-col-c-evenly {
+    @extends ._.flex-col-c, ._.jstf-evenly;
+  }
+  &.flex-col-c-around {
+    @extends ._.flex-col-c, ._.jstf-evenly;
+  }
+  &.flex-self-end {
+    align-self: flex-end;
+  }
+}

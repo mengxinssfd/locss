@@ -1,0 +1,1 @@
+._.fixed,._.astronaut{position:fixed}._.abs,._.abs-t,._.abs-b,._.abs-l,._.abs-r,._.abs-tl,._.abs-tr,._.abs-bl,._.abs-br{position:absolute}._.relative{position:relative}._.astronaut{top:-99999999px;left:-99999999px}._.abs-t,._.abs-tl,._.abs-tr{top:0}._.abs-b,._.abs-bl,._.abs-br{bottom:0}._.abs-l,._.abs-tl,._.abs-bl{left:0}._.abs-r,._.abs-tr,._.abs-br{right:0}
