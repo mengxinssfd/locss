@@ -2,9 +2,14 @@
   &.btn:not(.disabled):not(.active):not([disabled]) {
     cursor: pointer;
   }
-  &.wh-p100 {
+  &.w-p100 {
     width: 100%;
+  }
+  &.h-p100 {
     height: 100%;
+  }
+  &.wh-p100 {
+    @extends ._.w-p100,._.h-p100;
   }
   &.img-box {
     > img {
