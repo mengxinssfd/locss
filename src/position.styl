@@ -1,12 +1,18 @@
 ._ {
-  &.fixed {
+  &.pos-fixed, &.fixed {
     position: fixed;
   }
-  &.abs {
+  &.pos-static, &.static {
+    position: static;
+  }
+  &.pos-abs, &.abs {
     position: absolute;
   }
-  &.relative {
+  &.pos-rel, &.relative {
     position: relative;
+  }
+  &.pos-sticky, &.sticky {
+    position: sticky;
   }
   &.astronaut {
     @extends ._.fixed;
