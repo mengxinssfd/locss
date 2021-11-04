@@ -14,61 +14,74 @@
   &.pos-sticky, &.sticky {
     position: sticky;
   }
+  // .left-0{left:0;} .left-p100{left: 100%;}...
+  for d in top bottom left right {
+    &.{d + '-0'} {
+      {d}: 0;
+    }
+    &.{d + '-p100'} {
+      {d}: 100%;
+    }
+  }
   &.astronaut {
     @extends ._.fixed;
     top: -99999999px;
     left: -99999999px;
   }
+  // ↑
   &.abs-t {
-    @extend ._.abs;
-    top: 0;
+    @extends ._.abs, ._.top-0;
   }
+  // ↓
   &.abs-b {
-    @extend ._.abs;
-    bottom: 0;
+    @extends ._.abs, ._.bottom-0;
   }
+  // ←
   &.abs-l {
-    @extend ._.abs;
-    left: 0;
+    @extends ._.abs, ._.left-0;
   }
+  // →
   &.abs-r {
-    @extend ._.abs;
-    right: 0;
+    @extends ._.abs, ._.right-0;
   }
+  // ←↑
   &.abs-tl {
     @extends ._.abs-t, ._.abs-l;
   }
+  // ↑→
   &.abs-tr {
     @extends ._.abs-t, ._.abs-r;
   }
+  // ←↓
   &.abs-bl {
     @extends ._.abs-b, ._.abs-l;
   }
+  // ↓→
   &.abs-br {
     @extends ._.abs-b, ._.abs-r;
   }
+  // ←→
   &.lr-c {
-    @extends ._.abs-l, ._.abs-r;
+    @extends ._.left-0, ._.right-0;
     margin-left: auto;
     margin-right: auto;
   }
+  // ↑↓
   &.tb-c {
-    @extends ._.abs-t, ._.abs-b;
+    @extends ._.top-0, ._.bottom-0;
     margin-top: auto;
     margin-bottom: auto;
   }
-  &.pos-trans-c {
-    @extends ._.abs;
+  &.trans-c {
     left: 50%;
     transform: translateX(-50%);
   }
-  &.pos-trans-vc {
-    @extends ._.abs;
+  &.trans-vc {
     top: 50%;
     transform: translateY(-50%);
   }
-  &.pos-trans-c-c {
-    @extends ._.abs;
+  // ←→↑↓
+  &.trans-c-c {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
