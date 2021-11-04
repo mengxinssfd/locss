@@ -2,68 +2,68 @@
   &.flex {
     display: flex;
   }
-  &.jstf-center {
+  &.jstf-c_center {
     justify-content: center;
   }
-  &.jstf-evenly {
+  &.jstf-c_evenly {
     justify-content: space-evenly;
   }
-  &.jstf-between {
+  &.jstf-c_between {
     justify-content: space-between;
   }
-  &.jstf-around {
+  &.jstf-c_around {
     justify-content: space-around;
   }
-  &.flex-c {
+  &.flex_c {
     @extend ._.flex;
     align-items: center;
   }
-  &.flex-c-c {
-    @extends ._.flex-c,._.jstf-center ;
+  &.flex_c-c {
+    @extends ._.flex_c,._.jstf-c_center ;
   }
-  &.flex-c-between {
-    @extends ._.flex-c,._.jstf-between;
+  &.flex_c-between {
+    @extends ._.flex_c,._.jstf-c_between;
   }
-  &.flex-c-evenly {
-    @extends ._.flex-c,._.jstf-evenly;
+  &.flex_c-evenly {
+    @extends ._.flex_c,._.jstf-c_evenly;
   }
-  &.flex-c-around {
-    @extends ._.flex-c,._.jstf-around;
+  &.flex_c-around {
+    @extends ._.flex_c,._.jstf-c_around;
   }
-  &.flex-col {
+  &.flex_col {
     @extends ._.flex;
     flex-direction: column;
   }
-  &.flex-col-c {
-    @extends ._.flex-c;
+  &.flex_col-c {
+    @extends ._.flex_c;
     flex-direction: column;
   }
-  &.flex-col-c-c {
-    @extends ._.flex-c-c;
+  &.flex_col-c-c {
+    @extends ._.flex_c-c;
     flex-direction: column;
   }
-  &.flex-col-between {
-    @extends ._.flex-col, ._.jstf-between;
+  &.flex_col-between {
+    @extends ._.flex_col, ._.jstf-c_between;
   }
-  &.flex-col-c-between {
-    @extends ._.flex-col-c, ._.jstf-between;
+  &.flex_col-c-between {
+    @extends ._.flex_col-c, ._.jstf-c_between;
   }
-  &.flex-col-evenly {
-    @extends ._.flex-col, ._.jstf-evenly;
+  &.flex_col-evenly {
+    @extends ._.flex_col, ._.jstf-c_evenly;
   }
-  &.flex-col-c-evenly {
-    @extends ._.flex-col-c, ._.jstf-evenly;
+  &.flex_col-c-evenly {
+    @extends ._.flex_col-c, ._.jstf-c_evenly;
   }
-  &.flex-col-c-around {
-    @extends ._.flex-col-c, ._.jstf-evenly;
+  &.flex_col-c-around {
+    @extends ._.flex_col-c, ._.jstf-c_evenly;
   }
-  &.flex-1 {
+  &.flex_1 {
     flex: 1;
   }
-  &.flex-self-end {
+  &.align-sf_end {
     align-self: flex-end;
   }
-  &.flex-self-start {
+  &.align-sf_start {
     align-self: flex-start;
   }
 }

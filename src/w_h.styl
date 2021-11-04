@@ -3,12 +3,27 @@
   $len = 4;
   for num in (1..$len) {
     // p => percent百分比
-    $p = num*25;
-    &.h-p{$p} {
+    $p = num * 25;
+    &.h_p{$p} {
       height: floor(percentage(num / $len), 6); // 保留6位小数
     }
-    &.w-p{$p} {
+    &.w_p{$p} {
       width: floor(percentage(num / $len), 6);
     }
+  }
+  &.h_1em {
+    height: 1em;
+  }
+
+  &.h_100vh {
+    height: 100vh;
+  }
+
+  &.w_100vw {
+    width: 100vw;
+  }
+
+  .wh_p100 {
+    @extends ._.w_p100,._.h_p100;
   }
 }

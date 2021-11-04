@@ -1,0 +1,18 @@
+._ {
+  // flex已独立出去
+  for w in inline inline-block block inline-flex none {
+    .dspl_{w} {
+      display: w;
+    }
+  }
+  // vertical-align
+  &.vtc-a_m {
+    vertical-align: middle;
+  }
+  &.vtc-a_t {
+    vertical-align: top;
+  }
+  &.vtc-a_b {
+    vertical-align: bottom;
+  }
+}

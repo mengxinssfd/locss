@@ -2,18 +2,98 @@
   &.btn:not(.disabled):not(.active):not([disabled]) {
     cursor: pointer;
   }
-  &.fit-contain {
+  &.mg_0 {
+    margin: 0;
+  }
+  &.pd_0 {
+    padding: 0;
+  }
+  &.ovfl_hide {
+    overflow: hidden;
+  }
+  &.ovfl_auto {
+    overflow: auto;
+  }
+  &.text-a_c {
+    text-align: center;
+  }
+  &.text-a_l {
+    text-align: left;
+  }
+  &.text-a_r {
+    text-align: right;
+  }
+  &.font-w_bold {
+    font-weight: bold;
+  }
+  &.font-w_normal {
+    font-weight: normal;
+  }
+
+  &.bg_none {
+    background: none;
+  }
+  &.opct_0 {
+    opacity: 0;
+  }
+  &.opct_1 {
+    opacity: 1;
+  }
+  &.cursor_p {
+    cursor: pointer;
+  }
+  &.cursor_d {
+    cursor: default;
+  }
+  &.obj-fit_ct {
     object-fit: contain;
   }
-  &.fit-cover {
+  &.obj-fit_cv {
     object-fit: cover;
   }
+  &.user-s_none {
+    user-select: none;
+  }
+  &.user-s_auto {
+    user-select: auto;
+  }
+  &.bd-0 {
+    border: 0;
+  }
+  &.box-s_bb {
+    box-sizing: border-box;
+  }
+  &.box-s_cb {
+    box-sizing: content-box;
+  }
+  &.bd-radius_p50 {
+    border-radius: 50%;
+  }
+  &.line-h_1em {
+    line-height: 1em;
+  }
+  &.float_l {
+    float: left;
+  }
+  &.float_r {
+    float: right;
+  }
+  &.float_none {
+    float: none;
+  }
+
+  for w in nowrap normal pre pre-line pre-wrap break-spaces {
+    &.white_s-{w} {
+      white-space: w;
+    }
+  }
+
   &.img-box {
     > img {
       display: block;
       width: 100%;
       height: 100%;
-      @extend ._.fit-cover;
+      @extend ._.obj-fit_cv;
     }
   }
   &.clearfix:after {

@@ -1,26 +1,28 @@
 ._ {
-  &.pos-fixed, &.fixed {
+  &.pos_fixed, &.fixed {
     position: fixed;
   }
-  &.pos-static, &.static {
+  &.pos_static, &.static {
     position: static;
   }
-  &.pos-abs, &.abs {
+  &.pos_abs, &.abs {
     position: absolute;
   }
-  &.pos-rel, &.relative {
+  &.pos_rel, &.rel {
     position: relative;
   }
-  &.pos-sticky, &.sticky {
+  &.pos_sticky, &.sticky {
     position: sticky;
   }
-  // .left-0{left:0;} .left-p100{left: 100%;}...
-  for d in top bottom left right {
-    &.{d + '-0'} {
-      {d}: 0;
+  $tblr = t b l r;
+  $TBLR = top bottom left right;
+  // .l_0{left:0;} .l_p100{left: 100%;}...
+  for v,k in $TBLR {
+    &.{ $tblr[k] + '_0'} {
+      {v}: 0;
     }
-    &.{d + '-p100'} {
-      {d}: 100%;
+    &.{$tblr[k] +'_p100'} {
+      {v}: 100%;
     }
   }
   &.astronaut {
@@ -29,61 +31,69 @@
     left: -99999999px;
   }
   // ↑
-  &.abs-t {
-    @extends ._.abs, ._.top-0;
+  &.abs_t {
+    @extends ._.abs, ._.t_0;
   }
   // ↓
-  &.abs-b {
-    @extends ._.abs, ._.bottom-0;
+  &.abs_b {
+    @extends ._.abs, ._.b_0;
   }
   // ←
-  &.abs-l {
-    @extends ._.abs, ._.left-0;
+  &.abs_l {
+    @extends ._.abs, ._.l_0;
   }
   // →
-  &.abs-r {
-    @extends ._.abs, ._.right-0;
+  &.abs_r {
+    @extends ._.abs, ._.r_0;
   }
   // ←↑
-  &.abs-tl {
-    @extends ._.abs-t, ._.abs-l;
+  &.abs_tl {
+    @extends ._.abs_t, ._.abs_l;
   }
   // ↑→
-  &.abs-tr {
-    @extends ._.abs-t, ._.abs-r;
+  &.abs_tr {
+    @extends ._.abs_t, ._.abs_r;
   }
   // ←↓
-  &.abs-bl {
-    @extends ._.abs-b, ._.abs-l;
+  &.abs_bl {
+    @extends ._.abs_b, ._.abs_l;
   }
   // ↓→
-  &.abs-br {
-    @extends ._.abs-b, ._.abs-r;
+  &.abs_br {
+    @extends ._.abs_b, ._.abs_r;
   }
   // ←→
-  &.lr-c {
-    @extends ._.left-0, ._.right-0;
+  &.lr_c {
+    @extends ._.l_0, ._.r_0;
     margin-left: auto;
     margin-right: auto;
   }
   // ↑↓
-  &.tb-c {
-    @extends ._.top-0, ._.bottom-0;
+  &.tb_c {
+    @extends ._.t_0, ._.b_0;
     margin-top: auto;
     margin-bottom: auto;
   }
-  &.trans-c {
+  &.trans_c {
     left: 50%;
     transform: translateX(-50%);
   }
-  &.trans-vc {
+  &.trans_vc {
     top: 50%;
     transform: translateY(-50%);
   }
   // ←→↑↓
-  &.trans-c-c {
+  &.trans_c-c {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    justfc
+  }
+
+  // z-index
+  for num in 1...5 {
+    &.z-idx_{num}0 {
+      z-index: (num*10);
+    }
   }
 }
