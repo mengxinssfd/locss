@@ -2,7 +2,9 @@
   &.flex {
     display: flex;
   }
-
+  &.jstf-center {
+    justify-content: center;
+  }
   &.jstf-evenly {
     justify-content: space-evenly;
   }
@@ -17,8 +19,7 @@
     align-items: center;
   }
   &.flex-c-c {
-    @extends ._.flex-c ;
-    justify-content: center;
+    @extends ._.flex-c,._.jstf-center ;
   }
   &.flex-c-between {
     @extends ._.flex-c,._.jstf-between;
