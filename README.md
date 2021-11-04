@@ -27,7 +27,7 @@ ellipsis-1 - ellipsis-5
 ellipsis-mul 加 另外的css上 line-clamp: 行数;
 -webkit-line-clamp: 行数;
 ```html
-<div class="_ ellipsis-1"></div>
+<div class="_ ellipsis-mul"></div>
 ```
 
 ### flex布局
@@ -45,13 +45,13 @@ y轴居中
 ```
 x轴居中
 ```html
-<div class="_ flex j"></div>
+<div class="_ flex jstf-center"></div>
 ```
 等于
 ```css
 .flex-c {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 ```
 xy轴居中
